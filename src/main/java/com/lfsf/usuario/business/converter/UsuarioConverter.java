@@ -31,8 +31,8 @@ public class UsuarioConverter {
         List<Endereco> enderecos = new ArrayList<>();
         for(EnderecoDTO enderecoDTO: enderecoDTOs){
             enderecos.add(paraEndereco(enderecoDTO));
-            return enderecos;
-        }
+
+        }return enderecos;
         //Laço For
     }
 
@@ -76,8 +76,8 @@ public class UsuarioConverter {
         List<EnderecoDTO> enderecos = new ArrayList<>();
         for(Endereco enderecoDTO: enderecoDTOs){
             enderecos.add(paraEnderecoDTO(enderecoDTO));
-            return enderecos;
-        }
+
+        }return enderecos;
         //Laço For
     }
 

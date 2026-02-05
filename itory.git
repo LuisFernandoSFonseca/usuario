@@ -1,0 +1,23 @@
+[33mcommit 0b9d4967c65432e85f2afb3dfb970e3a52e8b58d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/cadastro_usuario[m[33m)[m
+Author: LuisFernandoSFonseca <luisf_sanches@live.com>
+Date:   Wed Jan 28 22:04:56 2026 -0300
+
+    Adicionado o metodo para cadastro do usuário (Salva o usuário)
+
+[33mcommit acb32f5ac41e09e717e4b094c4ac0a139a520bc3[m[33m ([m[1;31morigin/feature/security[m[33m, [m[1;32mfeature/security[m[33m)[m
+Author: LuisFernandoSFonseca <luisf_sanches@live.com>
+Date:   Sun Jan 25 19:08:59 2026 -0300
+
+    Adicionando classes de security
+
+[33mcommit 0d0e7dda253a726a3d15f0ac706d0d5c11da09e5[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: LuisFernandoSFonseca <43556626+LuisFernandoSFonseca@users.noreply.github.com>
+Date:   Sun Jan 25 18:28:41 2026 -0300
+
+    Create gradle.yml
+
+[33mcommit 4f3043b1a2fe724fa7b7bcf4f28d35677c9a5ee0[m
+Author: LuisFernandoSFonseca <luisf_sanches@live.com>
+Date:   Sun Jan 25 18:25:23 2026 -0300
+
+    commit inicial
