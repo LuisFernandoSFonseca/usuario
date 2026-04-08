@@ -1,12 +1,13 @@
-package com.lfsf.usuario.controller;
+package com.lfsf.usuario.infrastructure.exceptions;
 
 import org.springframework.security.core.AuthenticationException;
 
 public class UnauthorizedException extends AuthenticationException {
-    public ResourceNotFoundException(String mensagem){
+
+    public UnauthorizedException(String mensagem){
         super(mensagem);
     }
 
-    public ResourceNotFoundException(String mensagem, Throwable throwable){
+    public UnauthorizedException(String mensagem, Throwable throwable){
         super(mensagem, throwable);}
 }
