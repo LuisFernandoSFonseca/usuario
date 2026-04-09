@@ -1,10 +1,11 @@
 package com.lfsf.usuario.controller;
 
 import com.lfsf.usuario.business.UsuarioService;
+import com.lfsf.usuario.business.ViaCepService;
 import com.lfsf.usuario.business.dto.EnderecoDTO;
 import com.lfsf.usuario.business.dto.TelefoneDTO;
 import com.lfsf.usuario.business.dto.UsuarioDTO;
-import com.lfsf.usuario.infrastructure.entity.Usuario;
+import com.lfsf.usuario.infrastructure.clients.ViaCepDTO;
 import com.lfsf.usuario.infrastructure.security.JwtUtil;
 import com.lfsf.usuario.infrastructure.security.SecurityConfig;
 import io.swagger.v3.oas.annotations.Operation;
@@ -29,6 +30,7 @@ public class UsuarioControler {
     private final UsuarioService usuarioService;
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
+    private final ViaCepService viaCepService;
 
     @PostMapping
     @Operation(summary = "Salvar Usuários", description = "Cria um novo usuário")
@@ -125,5 +127,10 @@ public class UsuarioControler {
     public ResponseEntity<TelefoneDTO> cadastraTelefone(@RequestBody TelefoneDTO dto,
                                                        @RequestHeader("Authorization") String token){
         return ResponseEntity.ok(usuarioService.cadastraTelefone(token, dto));
+    }
+
+    @GetMapping("/endereco/{cep}")
+    public ResponseEntity<ViaCepDTO> buscarDadosCep(@PathVariable("cep")String cep){
+        return ResponseEntity.ok(viaCepService.buscarDadosEndereco(cep));
     }
 }
