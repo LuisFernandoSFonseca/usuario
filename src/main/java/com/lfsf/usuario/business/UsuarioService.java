@@ -109,6 +109,18 @@ public class UsuarioService {
 
     }
 
+    public void deletaTelefone(Long idTelefone) {
+        Telefone telefone = telefoneRepository.findById(idTelefone).orElseThrow(() ->
+                new ResourceNotFoundException("Id não encontrado " + idTelefone));
+        telefoneRepository.deleteById(idTelefone);
+    }
+
+    public void deletaEndereco(Long idEndereco) {
+        Endereco endereco = enderecoRepository.findById(idEndereco).orElseThrow(() ->
+                new ResourceNotFoundException("Id não encontrado " + idEndereco));
+        enderecoRepository.deleteById(idEndereco);
+    }
+
     public EnderecoDTO cadastraEndereco(String token, EnderecoDTO dto) {
         String email = jwtUtil.extractEmailFromToken(token.substring(7));
         Usuario usuario = usuarioRepository.findByEmail(email).orElseThrow(() ->
