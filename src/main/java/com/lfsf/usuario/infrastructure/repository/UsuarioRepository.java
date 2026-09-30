@@ -18,3 +18,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     void deleteByEmail(String email);
 
 }
+
+// Annotations for today(29/09/2026) --> Do a delete method for telefone and endereço...
+// First thoughts: We won't need to change anything on the repository, only on UsuarioService and UsuarioControler
+// Test with postman and DB online to actually check if it works, then move to FE and add the delete options there as well
+
